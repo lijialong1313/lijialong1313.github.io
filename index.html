@@ -5,6 +5,18 @@
     <title>test</title>
 </head>
 <body>
-this is a test about github
+    this is a test about github
+    <div id="app">
+      {{ message }}
+    </div>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+          el: '#app',
+          data: {
+            message: 'Hello Vue!'
+          }
+        })
+    </script>
 </body>
 </html>
