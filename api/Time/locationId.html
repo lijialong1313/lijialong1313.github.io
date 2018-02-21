@@ -11,7 +11,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $.ajax({
-              url:'https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api'
+              url:'https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api',
               success:function(data){
                 var location_list=data['p'];
                 for(var i=0;i<location_list.length;i++){
