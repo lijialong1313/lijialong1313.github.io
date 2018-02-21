@@ -19,13 +19,18 @@
 //             message: 'this is api'
 //           }
 //         })
-        $.ajax({
-            url:'https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',
-            success:function(data){
-                console.log(data);
-                console.log(data['city']);
-            },
-        });
+        $(document).ready(function(){
+            $.ajax({
+                url:'https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',
+                success:function(data){
+                    console.log(data);
+                    console.log(data['city']);
+                },
+                error:function(data){
+                    console.log('error'+data);
+                }
+            });
+        };
     </script>
 </body>
 </html>
