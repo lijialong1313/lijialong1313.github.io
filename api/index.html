@@ -10,18 +10,10 @@
     </div>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $.ajax({
-                url:'https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json',
-                success:function(data){
-                    console.log(data);
-                    console.log(data['city']);
-                },
-                error:function(data){
-                    console.log('error'+data);
-                }
-            });
-        };
+    </script>
+    <script language="javascript" type="text/javascript" src="http://fw.qq.com/ipaddress"> 
+    </script> 
+    <script>document.write("你的IP是："+IPData[0]+"，来自："+IPData[2]); 
     </script>
 </body>
 </html>
