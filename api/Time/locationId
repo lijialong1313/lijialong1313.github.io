@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>Time-locationId</title>
+    <body>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+              url:'https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api'
+              success:function(data){
+                var location_list=data['p'];
+                for(var i=0;i<location_list.length;i++){
+                  if(remote_ip_info['city']==location_list[i]['n']){
+                    document.write(location_list[i]['id'];
+                    break;
+                  }
+                }
+              }
+            });
+        });
+        console.log(remote_ip_info);
+        console.log(remote_ip_info['city']);
+    </script>
+</body>
+</html>
