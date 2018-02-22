@@ -15,6 +15,7 @@
                 type: 'GET',
                 dataType: 'JSONP',
                 success:function(data){
+                    console.log(data);
                     var location_list=data['p'];
                     for(var i=0;i<location_list.length;i++){
                       if(remote_ip_info['city']==location_list[i]['n']){
@@ -26,8 +27,8 @@
                 }
             });
         });
-        console.log(remote_ip_info);
-        console.log(remote_ip_info['city']);
+//         console.log(remote_ip_info);
+//         console.log(remote_ip_info['city']);
     </script>
 </body>
 </html>
