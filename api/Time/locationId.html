@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <title>Time-locationId</title>
     <body>
     <script src="//code.jquery.com/jquery-latest.js"></script>
@@ -12,17 +11,19 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $.ajax({
-              url:'https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api',
-              success:function(data){
-                var location_list=data['p'];
-                for(var i=0;i<location_list.length;i++){
-                  if(remote_ip_info['city']==location_list[i]['n']){
-                    console.log(location_list[i]['id']);
-                    document.write(location_list[i]['id']);
-                    break;
-                  }
+                url:'https://api-m.mtime.cn/Showtime/HotCitiesByCinema.api',
+                type: 'GET',
+                dataType: 'JSONP',
+                success:function(data){
+                    var location_list=data['p'];
+                    for(var i=0;i<location_list.length;i++){
+                      if(remote_ip_info['city']==location_list[i]['n']){
+                        console.log(location_list[i]['id']);
+                        document.write(location_list[i]['id']);
+                        break;
+                      }
+                    }
                 }
-              }
             });
         });
         console.log(remote_ip_info);
