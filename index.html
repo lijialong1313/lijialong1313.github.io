@@ -1,26 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>test</title>
+    <meta charset="UTF-8">
+    <title>简历生成器</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="static/js/script.js"></script>
 </head>
+
 <body>
-    this is a test about github
-    <div id="app">
-      {{ message }}
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait"></div>
+                <!--<div class="remodal remodal-img" data-remodal-id="portrait-modal">-->
+                    <!--<h3>请输入图片URL地址：</h3>-->
+                    <!--<br/>-->
+                    <!--<input type="text" id="avatar-url">-->
+                    <!--<button data-remodal-action="confirm" class="remodal-confirm">确定</button>-->
+                <!--</div>-->
+                <h1 id="username" >lijialong1313</h1>
+                <h4 id="persona-tag" >Java / Web / Android / PHP</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title">基本信息</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">姓名</label><span class="label-value">李家隆</span></li>
+                    <li>
+                        <label class="left-label">学历</label><span class="label-value">本科</span></li>
+                    <li>
+                        <label class="left-label">毕业院校</label><span class="label-value">华南理工大学广州学院</span></li>
+                    <li>
+                        <label class="left-label">毕业年份</label><span class="label-value">2017</span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont icon-call"></i> <span class="info-title">联系方式</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">手机</label><span class="label-value">13725118566</span></li>
+                    <li>
+                        <label class="left-label">邮箱</label><span class="label-value">jialong_li@163.com</span></li>
+                    <li>
+                        <label class="left-label">个人主页</label><span class="label-value">lijialong1313.github.io</span></li>
+                    <li>
+                        <label class="left-label">Github</label><span class="label-value">github.com/lijialong1313</span></li>
+                </ul>
+            </div>
+            <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title">技能点</span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label">Java</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">html/CSS</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">JavaScript</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">Android</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">PHP</label>
+                        <progress value="75" max="100"></progress>
+                    </li>
+                </ul>
+            </div>
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title">技术栈</span></h2>
+                <hr>
+                <ul class="stack-list">
+                    <li>
+                        <label class="left-label">前端</label><span class="label-value">jQuery、Vue、BootStra、MDUI</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">后端</label><span class="label-value">Servlet、Laravel、MySQL、Redis</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">其它</label><span class="label-value">Android</span></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont icon-weixin"></i> <span class="info-title">个人微信</span></h2>
+                <hr>
+                <div class="weixin">
+                    <img src="static/image/weixin.png" alt="">
+
+                </div>
+            </div>
+            <!--<div class="remodal remodal-img" data-remodal-id="weixin-modal">-->
+                <!--<h3>请输入图片URL地址：</h3>-->
+                <!--<br/>-->
+                <!--<input type="text" id="weixin-url">-->
+                <!--<button data-remodal-action="confirm" class="remodal-confirm">确定</button>-->
+            <!--</div>-->
+        </div>
+        <div class="main">
+            <div class="education info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-education"></i> <span class="info-title">教育经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>华南理工大学广州学院 - 计算机科学与技术专业（本科）2015-2019</h3>
+                        <p>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="work info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-work"></i> <span class="info-title">工作经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>华南理工大学广州学院-软件创新实验室（技术-管理人员）</h3>
+                        <p>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>在校课程-Java EE（实习）</h3>
+                        <p>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-project"></i> <span class="info-title">个人项目</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>华南理工大学广州学院-教务处微信公众号</h3>
+                        <p>
+                            通过微信与学校教务功能联动，例如查询成绩，查询考试时间地点，查询课程表等。
+                            <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>华南理工大学广州学院-在校Android客户端</h3>
+                        <p>
+                            客户端可和教务系统联动，提供查询成绩、查询课表、抢课、图书馆书籍查询、一卡通查询等
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="trophy info-unit">
+                <h2 class="info-header"><i class="iconfont icon-trophy"></i> <span class="info-title">奖项与证书</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>ACM竞赛-国赛-参与奖</h3>
+                        <p>
+
+                        </p>
+                    </li> 
+                    <li>
+                        <h3>蓝桥杯-省赛-二等奖</h3>
+                        <p>
+
+                        </p>
+                    </li> 
+                    <li>
+                        <h3>团体程序设计天梯赛-团体三等奖</h3>
+                        <p>
+
+                        </p>
+                    </li>                     
+            </div>
+            <div class="aboutme info-unit right-paragraph">
+                <h2 class="info-header"><i class="iconfont icon-flower"></i> <span class="info-title">自我评价</span></h2>
+                <hr>
+                <p>
+                    本人性格沉稳严谨、待人真诚。对待学习积极刻苦，对工作严谨负责，认真细致，遵守各项规章制度。注重团队合作，对新鲜事物有较强的学习能力，能承受工作压力。专业为计算机科学与技术，在校所修课程有：Java、Android、C#、PHP等
+                    <br>本人在校期间积极参加学校和院系的各类活动，如艺术节、运动会等，曾担任教务处学生助理，负责整理文档等工作。在校内的社会实践工作中初步掌握了办公秘书、文员等日常事务性工作，了解文件整理、信件收发、日程安排、会议通知、会议记录、电子邮件管理、文件及资料使用登记等文员类基础工作。在实践中提高了自身能力，为毕业求职积累了宝贵的实践经验。
+                    <br>本人爱好阅读、音乐及美术，有一定的文艺鉴赏能力。具备编辑写作、计算机操作、网络应用技能等多种工作技能与能力，具有一定的可塑性。对待工作踏实肯干，能吃苦，坚信成功属于勤奋的人。
+                </p>
+            </div>
+        </div>
     </div>
-    <script src="//code.jquery.com/jquery-latest.js"></script>
-    <script src="//vuejs.org/js/vue.js"></script>
-    <script type="text/javascript">
-        var app = new Vue({
-          el: '#app',
-          data: {
-            message: 'Hello Vue!'
-          }
-        })
-    </script>
-    <script language="javascript" type="text/javascript" src="http://fw.qq.com/ipaddress"></script>
-    <script>document.write("你的IP是："+IPData[0]+"，来自："+IPData[2]);  
-    </script>
 </body>
+
 </html>
